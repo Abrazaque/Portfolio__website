@@ -1,1084 +1,697 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
-
-    <!--
-    - favicon
-  -->
-    <link
-      rel="shortcut icon"
-      href="logo.ico"
-      type="image/x-icon"
-    />
-
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <!--
-    - #MAIN
-  -->
-
-    <main>
-      <!--
-      - #SIDEBAR
-    -->
-
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img
-              src="profile.jpeg"
-              alt="Richard hanrick"
-              width="100"
-              height="120"
-            />
-          </figure>
-
-          <div class="info-content">
-            <h1 class="name" title="Richard hanrick">Abdul Razaque</h1>
-
-            <p class="title">AI Engineer @Xflow Research Inc.</p>
-          </div>
-
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
-        </div>
-
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-
-                <a href="razaqueabdul273@gmail.com" class="contact-link"
-                  >razaqueabdul273@gmail.com</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-
-                <a href="tel:+92491274273" class="contact-link">03491274273</a>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="calendar-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Birthday</p>
-
-                <time datetime="2002-08-22">Aug 22, 2002</time>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-
-                <address>Nawabshah,Sindh,Pakistan</address>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/abdul-razaque-17095320a/"
-                class="social-link"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1.25em"
-                  viewBox="0 0 448 512"
-                >
-                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <style>
-                    svg {
-                      fill: #b0b0b0;
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Razaque | AI Engineer & Data Scientist</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f1ff',
+                            100: '#b3d7ff',
+                            200: '#80bdff',
+                            300: '#4da3ff',
+                            400: '#1a89ff',
+                            500: '#0070e0',
+                            600: '#0057b3',
+                            700: '#003d80',
+                            800: '#00244d',
+                            900: '#000b1a'
+                        }
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'gradient-y': 'gradient-y 15s ease infinite',
+                        'gradient-xy': 'gradient-xy 15s ease infinite'
+                    },
+                    keyframes: {
+                        'gradient-y': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'center top'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'center center'
+                            }
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        },
+                        'gradient-xy': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': '0% 50%'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': '100% 50%'
+                            }
+                        }
                     }
-                  </style>
-                  <path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a href="https://github.com/Abrazaque" class="social-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1.25em"
-                  viewBox="0 0 448 512"
-                >
-                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a href="https://www.facebook.com" class="social-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1.25em"
-                  viewBox="0 0 448 512"
-                >
-                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #1a202c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #0070e0, #1a89ff);
+            border-radius: 10px;
+        }
+
+        /* Glowing Effects */
+        .glow {
+            transition: all 0.3s ease;
+        }
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(0, 112, 224, 0.5);
+            transform: scale(1.05);
+        }
+
+        /* Animated Background */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0070e0, #1a89ff, #003d80, #000b1a);
+            background-size: 400% 400%;
+            animation: gradient-xy 15s ease infinite;
+        }
+
+        /* 3D Hover Effect */
+        .tilt-container {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        .tilt-inner {
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        .tilt-container:hover .tilt-inner {
+            transform: rotateX(10deg) rotateY(-10deg);
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 100; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            background-color: #1a202c;
+            margin: 10% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; 
+            max-width: 800px;
+            border-radius: 8px;
+            color: #fff;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 dark:bg-gray-900 dark:text-white">
+    <div id="background-scene" class="fixed inset-0 z-[-10] opacity-30"></div>
+
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary-400">AI Engineer</div>
+            <div class="flex space-x-6">
+                <a href="#home" class="text-gray-300 hover:text-primary-400 transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-primary-400 transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary-400 transition">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-primary-400 transition">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary-400 transition">Contact</a>
+            </div>
         </div>
-      </aside>
+    </nav>
 
-      <!--
-      - #main-content
-    -->
-
-      <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <!-- <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Portfolio</button>
-            </li> -->
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--
-        - #ABOUT
-      -->
-
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-
-          <section class="about-text">
-            <p>
-              I'm Abdul Razaque, a final-year software engineering student, currently serving as a AI Engineer at Xflow Research Inc. in Islamabad. Driven by a passion for data science and Generative AI, my proficiency lies in key areas that make me a valuable asset to any data science team.
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative z-10 animated-gradient">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h1 class="text-5xl font-bold mb-4 text-white">
+                Abdul Razaque
+            </h1>
+            <h2 class="text-2xl mb-6 text-primary-200">
+                <span id="typed-output"></span>
+            </h2>
+            <p class="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+                AI Engineer transforming data into intelligent solutions through advanced machine learning and generative AI technologies.
             </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact" class="px-8 py-3 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">
+                    Hire Me
+                </a>
+                <a href="#projects" class="px-8 py-3 border border-primary-400 text-primary-300 rounded-full hover:bg-primary-500 hover:text-white transition">
+                    View Projects
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <p>
-                        <ul>
-                            <li>Data Science: Utilizing data to innovate and solve complex problems.</li>
-                            <li>Generative AI: Applying advanced AI techniques to create new and innovative solutions.</li>
-                            <li>AI Engineering: Hands-on experience in developing and implementing AI models and systems.</li>
-                        </ul>
-              
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary-400">
+                About Me
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap--8">
+                <div class="md:w-[25%] mb-8 md:mb-0">
+                    <!-- Made the profile image round by using 'rounded-full' -->
+                    <img src="C:\Users\Abdul Razaque\Downloads\Profile.jpeg" alt="Abdul Razaque" class="rounded-full shadow-lg glow w-85 h-85 object-cover">
+                </div>
+                <div class="md:w-[75%] md:pl-12">
+                    <p class="text-gray-300 mb-4">
+                        With a passion for artificial intelligence and data science, I specialize in developing cutting-edge solutions that leverage machine learning and generative AI to solve complex problems. My expertise spans across various domains, including predictive modeling, natural language processing, and data analysis.
+                    </p>
+                    <p class="text-gray-300 mb-4">
+                        I thrive in dynamic environments where innovation and continuous learning are encouraged. Whether it's building intelligent systems, analyzing large datasets, or creating engaging AI-driven applications, I am dedicated to delivering high-quality results that drive success.
+                    </p>
+                    <p class="text-gray-300">
+                        My journey in AI has equipped me with a deep understanding of generative models, reinforcement learning, and advanced data processing techniques. I am committed to staying at the forefront of AI advancements to deliver impactful solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Skills Section -->
+    <section id="skills" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary-400">
+                Technical Expertise
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Machine Learning Card -->
+                <div class="tilt-container">
+                    <div class="tilt-inner bg-gray-900 p-6 rounded-lg glow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-brain text-primary-400 text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Machine Learning</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Advanced predictive modeling and algorithm development
+                        </p>
+                        <div class="space-x-2">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Regression</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Classification</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Clustering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generative AI Card -->
+                <div class="tilt-container">
+                    <div class="tilt-inner bg-gray-900 p-6 rounded-lg glow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-magic text-primary-400 text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Generative AI</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Innovative content generation and language models
+                        </p>
+                        <div class="space-x-2">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">LLMs</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">RAG</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">GANs</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Text Generation</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Image Synthesis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science Card -->
+                <div class="tilt-container">
+                    <div class="tilt-inner bg-gray-900 p-6 rounded-lg glow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line text-primary-400 text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Data Science</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Advanced statistical analysis and insights extraction
+                        </p>
+                        <div class="space-x-2">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">EDA</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Modeling</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Visualization</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Data Mining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Natural Language Processing Card -->
+                <div class="tilt-container">
+                    <div class="tilt-inner bg-gray-900 p-6 rounded-lg glow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-language text-primary-400 text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Natural Language Processing</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Expertise in language models, sentiment analysis, and text generation
+                        </p>
+                        <div class="space-x-2">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Tokenization</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Sentiment Analysis</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Entity Recognition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reinforcement Learning Card -->
+                <div class="tilt-container">
+                    <div class="tilt-inner bg-gray-900 p-6 rounded-lg glow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-robot text-primary-400 text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Reinforcement Learning</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Designing agents that learn optimal actions through interaction
+                        </p>
+                        <div class="space-x-2">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Q-Learning</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Policy Gradients</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Deep RL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Vision Card -->
+                <div class="tilt-container">
+                    <div class="tilt-inner bg-gray-900 p-6 rounded-lg glow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-camera text-primary-400 text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Computer Vision</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Image processing, object detection, and image generation
+                        </p>
+                        <div class="space-x-2">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">CNNs</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Object Detection</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Image Segmentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Projects Showcase -->
+    <section id="projects" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary-400">
+                Featured Projects
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- AI Content Generator -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden glow" data-aos="fade-up">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-400">
+                            AI Content Generator
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            Automated blog generation system using Open Source llm llama2
+                        </p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">LangChain</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">OpenAI</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Open source LLM</span>
+                        </div>
+                        <a href="https://github.com/Abrazaque/Blog-Generator-using-Llama2" class="text-primary-400 hover:underline" onclick="openModal('ai-content-generator')">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Brain Tumor MRI Detection -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden glow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-400">
+                            Brain Tumor MRI Detection
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            Utilizing PyXtral for accurate detection and classification of brain tumors from MRI scans
+                        </p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">PyXtral</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Deep Learning</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Medical Imaging</span>
+                        </div>
+                        <a href="https://github.com/Abrazaque/Brain-tumour-analyser-" class="text-primary-400 hover:underline" onclick="openModal('brain-tumor-mri')">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Chatbot -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden glow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-400">
+                            Menu Chatbot
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            A responsive chatbot using Retrieval-Augmented Generation (RAG) to assist customers with menu selections
+                        </p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">RAG</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Chatbot</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">NLP</span>
+                        </div>
+                        <a href="#" class="text-primary-400 hover:underline" onclick="openModal('menu-chatbot')">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Custom Perfume Maker -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden glow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-400">
+                            Custom Perfume Maker
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            Leveraging RAG to create personalized perfume recommendations based on user preferences
+                        </p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">RAG</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Recommendation Systems</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">User Preferences</span>
+                        </div>
+                        <a href="#" class="text-primary-400 hover:underline" onclick="openModal('custom-perfume-maker')">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- E-commerce Chatbot -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden glow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-400">
+                            E-commerce Chatbot
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            NLP-driven customer support chatbot enhancing user experience
+                        </p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">NLP</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Chatbot</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Customer Support</span>
+                        </div>
+                        <a href="https://github.com/Abrazaque/E-commerce-Chatbot" class="text-primary-400 hover:underline" onclick="openModal('ecommerce-chatbot')">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Health Data Interpreter -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden glow" data-aos="fade-up" data-aos-delay="500">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-400">
+                            Health Assistant Model using Multilanguage Model
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            Machine learning solution for enhanced health data analysis
+                        </p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">MLM</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Healthcare</span>
+                            <span class="bg-primary-900 text-primary-300 px-2 py-1 rounded text-sm">Computer Vision</span>
+                        </div>
+                        <a href="https://github.com/Abrazaque/Health-assistant" class="text-primary-400 hover:underline" onclick="openModal('health-data-interpreter')">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- AI Content Generator Modal -->
+    <div id="ai-content-generator" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ai-content-generator')">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-primary-400">AI Content Generator</h2>
+            <p class="text-gray-300 mb-4">
+                The AI Content Generator is an automated system designed to generate high-quality blog posts using advanced Natural Language Processing (NLP) techniques. Leveraging LangChain and OpenAI's GPT models, the system can produce coherent, contextually relevant, and engaging content tailored to specific topics and audiences.
             </p>
-            <a href="resume.pdf" download class="cv-download-button">Download CV</a>
-           
-          </section>
-          <style>
-            .cv-download-button {
-              display: inline-block;
-              padding: 10px;
-              border: 1px solid #ddd;
-              border-radius: 5px;
-              text-decoration: none;
-              color: hsl(0, 33%, 99%);
-              margin-top: 20px;
-            }
-          
-            .cv-download-button:hover {
-              background-color: #eee;
-            }
-          </style>
-          
-          <!--
-          - service
-        -->
-
-          <section class="service">
-            <h3 class="h3 service-title">Skills</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="icon-design.svg
-                "
-                    alt="design icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Machine Learning</h4>
-
-                  <p class="service-item-text">
-                    A masterpiece of design intricately woven with the essence
-                    of machine learning's transformative capabilities.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="icon-dev.svg"
-                    alt="Web development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Data Analysis</h4>
-
-                  <p class="service-item-text">
-                    A manifestation of professional prowess, this design
-                    resonates with the essence of a seasoned data analyst's
-                    expertise.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="icon-app.svg"
-                    alt="mobile app icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Power Bi And SQL</h4>
-
-                  <p class="service-item-text">
-                    Infused with the power of BI, this design stands as a visual
-                    representation of seamless data insights and analytics
-                    mastery.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="icon-photo.svg"
-                    alt="camera icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Data Visualizations</h4>
-
-                  <p class="service-item-text">
-                    I make professional at Data Visualizations of any category
-                    at a professional level.
-                  </p>
-                </div>
-              </li>
+            <p class="text-gray-300 mb-4">
+                Features include:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+                <li>Topic-specific content generation</li>
+                <li>SEO optimization</li>
+                <li>Customizable writing styles</li>
+                <li>Automated content scheduling</li>
             </ul>
-          </section>
+            <a href="#" class="text-primary-400 hover:underline">Live Demo</a> |
+            <a href="https://github.com/Abrazaque/New_aticle_bot" class="text-primary-400 hover:underline">GitHub Repository</a>
+        </div>
+    </div>
 
-          <!--
-          - testimonials
-     -->
-
-          <!-- <section class="testimonials">
-            <h3 class="h3 testimonials-title">testimonials</h3>
-
-            <ul class="testimonials-list has-scrollbar">
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="avatar-1.png"
-                      alt="Daniel lewis"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Machine learning
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="avatar-2.png"
-                      alt="Jessica miller"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Jessica miller
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="avatar-3.png"
-                      alt="Emily evans"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Emily evans
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="avatar-4.png"
-                      alt="Henry william"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Henry william
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
+    <!-- Brain Tumor MRI Detection Modal -->
+    <div id="brain-tumor-mri" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('brain-tumor-mri')">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-primary-400">Brain Tumor MRI Detection</h2>
+            <p class="text-gray-300 mb-4">
+                This project focuses on the detection and classification of brain tumors using MRI scans. Utilizing PyXtral, a powerful deep learning framework, the system analyzes MRI images to accurately identify the presence and type of tumors, aiding in early diagnosis and treatment planning.
+            </p>
+            <p class="text-gray-300 mb-4">
+                Features include:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+                <li>High-accuracy tumor detection</li>
+                <li>Automated image preprocessing</li>
+                <li>Real-time analysis and reporting</li>
+                <li>User-friendly interface for medical professionals</li>
             </ul>
-          </section> -->
+            <a href="#" class="text-primary-400 hover:underline">Live Demo</a> |
+            <a href="#" class="text-primary-400 hover:underline">GitHub Repository</a>
+        </div>
+    </div>
 
-          <!-- - testimonials modal -->
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-
-              <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img
-                    src="avatar-1.png"
-                    alt="Daniel lewis"
-                    width="80"
-                    data-modal-img
-                  />
-                </figure>
-
-                <img src="icon-quote.svg" alt="quote icon" />
-              </div>
-
-              <div class="modal-content">
-                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-                <time datetime="2021-06-14">14 June, 2021</time>
-
-                <div data-modal-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were
-                    very pleased with the work done. She has a lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum
-                    dolor sit amet, ullamcous cididt consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels
-                    dolore magnarels alia.
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div> 
-
-          <!--
-          - certification
-        -->
-
-          <section class="clients">
-            <h3 class="h3 clients-title">Certificates</h3>
-
-            <ul class="clients-list has-scrollbar">
-              <li class="clients-item">
-                <a href="#">
-                  <img src="ml.png" alt="ml" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="image processing.jpg" alt="ml" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="generative ai for everyone.png" alt="ml" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="ml internship.jpg" alt="ml" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="data science internship.jpg" alt="ml" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="get fimiliar with ml.png" alt="ml" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="sql.png" alt="client logo" />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="google.png" alt="client logo" />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="mc.png" alt="client logo" />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="data_analysis.png" alt="client logo" />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="powerbi.png" alt="client logo" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="ml for all.png" alt="client logo" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="python.png" alt="client logo" />
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="#">
-                  <img src="data_analysis.png" alt="client logo" />
-                </a>
-              </li>
+    <!-- Menu Chatbot Modal -->
+    <div id="menu-chatbot" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('menu-chatbot')">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-primary-400">Menu Chatbot</h2>
+            <p class="text-gray-300 mb-4">
+                The Menu Chatbot is an intelligent assistant designed to help customers navigate restaurant menus effortlessly. Using Retrieval-Augmented Generation (RAG), the chatbot provides personalized recommendations, answers queries about dishes, and assists with order placements, enhancing the overall dining experience.
+            </p>
+            <p class="text-gray-300 mb-4">
+                Features include:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+                <li>Personalized dish recommendations</li>
+                <li>Real-time order processing</li>
+                <li>Multilingual support</li>
+                <li>Integration with existing restaurant systems</li>
             </ul>
-          </section>
-        </article>
+            <a href="#" class="text-primary-400 hover:underline">Live Demo</a> |
+            <a href="#" class="text-primary-400 hover:underline">GitHub Repository</a>
+        </div>
+    </div>
 
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <header>
-            <h2 class="h2 article-title">Resume</h2>
-          </header>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Education</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">The School of Thoughts</h4>
-
-                <span>2014 - 2017</span>
-
-                <p class="timeline-text">
-                  During my time at School of Thought from 2014 to 2016, I
-                  cultivated a strong foundation in critical thinking and
-                  creativity, setting the stage for my educational journey.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  PSSSS Govt Degree College Sanghar
-                </h4>
-
-                <span>2017 — 2018</span>
-
-                <p class="timeline-text">
-                  My intermediate education at Govt Degree College Sanghar
-                  (2018) not only solidified my academic prowess but also honed
-                  my interpersonal skills through diverse interactions with
-                  peers.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Quest University Nawabshah
-                </h4>
-
-                <span>2020 — Present</span>
-
-                <p class="timeline-text">
-                  Pursuing a Bachelor of Science in Software Engineering at
-                  Quest University Nawabshah, I've embraced the challenges of
-                  higher education and expanded my horizons within the dynamic
-                  world of technology.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Experience</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  AI Engineer @Xflow Research Inc Islamabad
-                </h4>
-
-                <span>2023 — Present</span>
-
-                <p class="timeline-text">
-                  - Developing AI Applications.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Machine Learning Fundamentals (IBM)
-                </h4>
-
-                <span>2023 — 2024</span>
-
-                <p class="timeline-text">
-                  - Proficient in applying machine learning techniques to
-                  real-world problems.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Data Analysis Essentials (IBM)
-                </h4>
-
-                <span>2022 - 2023</span>
-
-                <p class="timeline-text">
-                  Equipped with the skills to extract valuable insights from
-                  complex datasets.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Power BI Report Development (Coursera)
-                </h4>
-
-                <span>2023 - 2024 </span>
-
-                <p class="timeline-text">
-                  Skilled in creating impactful visualizations and reports using
-                  Power BI.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  SQL Fundamentals (HackerRank)
-                </h4>
-
-                <span>2023 -Present </span>
-
-                <p class="timeline-text">
-                  Well-versed in SQL querying for data manipulation and
-                  retrieval.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
-
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data analyst</h5>
-                  <data value="80">80%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Machine Learning</h5>
-                  <data value="70">70%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Visualizations</h5>
-                  <data value="90">90%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">NLP</h5>
-                  <data value="60">60%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 50%"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Python</h5>
-                  <data value="90">90%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Langchain</h5>
-                  <data value="80">80%</data>
-                </div>
-                 <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Generative AI</h5>
-                  <data value="70">70%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Power Bi</h5>
-                  <data value="65">65%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%"></div>
-                </div>
-              </li>
+    <!-- Custom Perfume Maker Modal -->
+    <div id="custom-perfume-maker" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('custom-perfume-maker')">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-primary-400">Custom Perfume Maker</h2>
+            <p class="text-gray-300 mb-4">
+                The Custom Perfume Maker leverages Retrieval-Augmented Generation (RAG) to create personalized perfume recommendations based on user preferences. By analyzing user inputs and historical data, the system suggests unique fragrance combinations that cater to individual tastes.
+            </p>
+            <p class="text-gray-300 mb-4">
+                Features include:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+                <li>Personalized fragrance recommendations</li>
+                <li>Interactive user interface</li>
+                <li>Integration with fragrance databases</li>
+                <li>Real-time customization options</li>
             </ul>
-          </section>
-        </article>
+            <a href="#" class="text-primary-400 hover:underline">Live Demo</a> |
+            <a href="#" class="text-primary-400 hover:underline">GitHub Repository</a>
+        </div>
+    </div>
 
-        <!--
-        - #PORTFOLIO
-      -->
-
-        <article class="portfolio" data-page="portfolio">
-          <header>
-            <h2 class="h2 article-title">Portfolio</h2>
-          </header>
-
-          <section class="projects">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Machine Learning</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Data Analysis</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Power Bi</button>
-              </li>
+    <!-- E-commerce Chatbot Modal -->
+    <div id="ecommerce-chatbot" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ecommerce-chatbot')">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-primary-400">E-commerce Chatbot</h2>
+            <p class="text-gray-300 mb-4">
+                An NLP-driven customer support chatbot designed to enhance user experience on e-commerce platforms. The chatbot assists customers with product inquiries, order tracking, and provides personalized shopping suggestions, streamlining the purchasing process.
+            </p>
+            <p class="text-gray-300 mb-4">
+                Features include:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+                <li>24/7 customer support</li>
+                <li>Order tracking and management</li>
+                <li>Personalized product recommendations</li>
+                <li>Seamless integration with e-commerce platforms</li>
             </ul>
+            <a href="#" class="text-primary-400 hover:underline">Live Demo</a> |
+            <a href="#" class="text-primary-400 hover:underline">GitHub Repository</a>
+        </div>
+    </div>
 
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
-                  Select category
-                </div>
-
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Machine Learning</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Data Analysis</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Power Bi</button>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Data Analysis"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="project-1.jpg"
-                      alt="finance"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Finance</h3>
-
-                  <p class="project-category">Data Analysis</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Data Analysis"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="project-2.png"
-                      alt="orizon"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Orizon</h3>
-
-                  <p class="project-category">Data Analysis</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Machine Learning"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="project-3.jpg"
-                      alt="fundo"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">House Price Prediction</h3>
-
-                  <p class="project-category">Machine Learning</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Power Bi"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="project-8.jpg"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Task Manager Dashboard</h3>
-
-                  <p class="project-category">Power Bi</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Power Bi"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="project-9.png"
-                      alt="arrival"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Arriva</h3>
-
-                  <p class="project-category">Power Bi</p>
-                </a>
-              </li>
+    <!-- Health Data Interpreter Modal -->
+    <div id="health-data-interpreter" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('health-data-interpreter')">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 text-primary-400">Health Data Interpreter</h2>
+            <p class="text-gray-300 mb-4">
+                A comprehensive machine learning solution designed for enhanced health data analysis. The Health Data Interpreter utilizes advanced algorithms to extract meaningful insights from complex datasets, aiding healthcare professionals in decision-making and patient care.
+            </p>
+            <p class="text-gray-300 mb-4">
+                Features include:
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+                <li>Automated data preprocessing</li>
+                <li>Predictive analytics</li>
+                <li>Interactive data visualization</li>
+                <li>Integration with healthcare databases</li>
             </ul>
-          </section>
-        </article>
+            <a href="#" class="text-primary-400 hover:underline">Live Demo</a> |
+            <a href="#" class="text-primary-400 hover:underline">GitHub Repository</a>
+        </div>
+    </div>
 
-        <!--
-        - #CONTACT
-      -->
-
-        <article class="contact" data-page="contact">
-          <header>
-            <h2 class="h2 article-title">Contact</h2>
-          </header>
-
-          <section class="mapbox" data-mapbox>
-            <figure>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                width="400"
-                height="300"
-                loading="lazy"
-              ></iframe>
-            </figure>
-          </section>
-
-          <section class="contact-form">
-            <h3 class="h3 form-title">Contact Form</h3>
-
-            <form action="#" class="form" data-form>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  name="fullname"
-                  class="form-input"
-                  placeholder="Full name"
-                  required
-                  data-form-input
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  class="form-input"
-                  placeholder="Email address"
-                  required
-                  data-form-input
-                />
-              </div>
-
-              <textarea
-                name="message"
-                class="form-input"
-                placeholder="Your Message"
-                required
-                data-form-input
-              ></textarea>
-
-              <button class="form-btn" type="submit" disabled data-form-btn>
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-              </button>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 z-10">
+        <div class="max-w-xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary-400">
+                Let's Connect
+            </h2>
+            <form class="bg-gray-900 p-8 rounded-lg shadow-lg" action="https://formspree.io/f/xannrewe" method="POST">
+                <div class="mb-4">
+                    <label class="block text-primary-300 mb-2" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-gray-800 text-white p-3 rounded-lg" placeholder="Your Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-primary-300 mb-2" for="email">Email</label>
+                    <input type="email" id="email" name="_replyto" class="w-full bg-gray-800 text-white p-3 rounded-lg" placeholder="Your Email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-primary-300 mb-2" for="message">Message</label>
+                    <textarea id="message" name="message" class="w-full bg-gray-800 text-white p-3 rounded-lg" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary-500 text-white p-3 rounded-lg hover:bg-primary-600 transition">
+                    Send Message
+                </button>
             </form>
-          </section>
-        </article>
-      </div>
-    </main>
+        </div>
+    </section>
 
-    <!--
-    - custom js link
-  -->
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-4">&copy; 2025 Abdul Razaque. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <!-- <a href="#" class="text-gray-400 hover:text-primary-400 transition" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a> -->
+                <a href="#" class="text-gray-400 hover:text-primary-400 transition" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary-400 transition" aria-label="GitHub">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary-400 transition" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'slide',
+            once: true
+        });
+
+        // Initialize Typed.js
+        var typed = new Typed('#typed-output', {
+            strings: ['AI Engineer', 'Data Scientist', 'Machine Learning Enthusiast', 'Generative AI Specialist'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 2000,
+            loop: true
+        });
+
+        // Initialize Three.js Background Scene (Optional)
+        // You can add your Three.js code here to create an interactive background
+
+        // Dark Mode Toggle (Optional)
+        // If you want to add a dark mode toggle button, you can implement it here
+
+        // Modal Functionality
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
 </html>
